@@ -1,0 +1,15 @@
+{
+ "id": "com.sammysco.avoverlay.settings",
+ "version": "2.4.3",
+ "type": "web",
+ "title": "AV Overlay Settings (Denon fork)",
+ "appDescription": "Settings app for eARC Volume Overlay.",
+ "iconUri": "https://ovsteenb.github.io/webos-av-overlay/icons/com.sammysco.avoverlay.settings.png",
+ "sourceUrl": "https://github.com/ovsteenb/webos-av-overlay/tree/denon-avr-support",
+ "rootRequired": true,
+ "ipkUrl": "https://github.com/ovsteenb/webos-av-overlay/releases/download/v2.4.3-denon/com.sammysco.avoverlay.settings_2.4.3_all.ipk",
+ "ipkHash": {
+  "sha256": "ad46050d55bad63a879eb480de7b0f5203f87841d0ad8a48c95492846500dbd4"
+ },
+ "ipkSize": 11078
+}
