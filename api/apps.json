@@ -24,9 +24,9 @@
         "rootRequired": true,
         "ipkUrl": "https://github.com/ovsteenb/webos-av-overlay/releases/download/v2.4.7-denon/com.sammysco.avoverlay_2.4.7_all.ipk",
         "ipkHash": {
-          "sha256": "0956a67d435585225659f19289ca4b5d5167d4452011b98b60befb8a2a7e9124"
+          "sha256": "add2f5600172ca729788a6e462330c50c637ad291c44ab21a9c417c0a55ee875"
         },
-        "ipkSize": 63414
+        "ipkSize": 63912
       },
       "pool": "main",
       "shortDescription": "On-screen AVR volume/format overlay; Yamaha + Denon/Marantz. Rooted TV required."
@@ -47,7 +47,7 @@
         "rootRequired": true,
         "ipkUrl": "https://github.com/ovsteenb/webos-av-overlay/releases/download/v2.4.7-denon/com.sammysco.avoverlay.settings_2.4.7_all.ipk",
         "ipkHash": {
-          "sha256": "f8d987515fffaaf954137101df721064d11ba643ef1d2a9cf77f9a4564074639"
+          "sha256": "4fb8d40f8b386cf443b299eb7d3575380eb44fc2314058790dfc2b6cb5d2c4f6"
         },
         "ipkSize": 11518
       },

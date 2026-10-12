@@ -9,7 +9,7 @@
  "rootRequired": true,
  "ipkUrl": "https://github.com/ovsteenb/webos-av-overlay/releases/download/v2.4.7-denon/com.sammysco.avoverlay.settings_2.4.7_all.ipk",
  "ipkHash": {
-  "sha256": "f8d987515fffaaf954137101df721064d11ba643ef1d2a9cf77f9a4564074639"
+  "sha256": "4fb8d40f8b386cf443b299eb7d3575380eb44fc2314058790dfc2b6cb5d2c4f6"
  },
  "ipkSize": 11518
 }
