@@ -15,18 +15,18 @@
       "manifestUrl": "https://ovsteenb.github.io/webos-av-overlay/apps/com.sammysco.avoverlay/manifest.json",
       "manifest": {
         "id": "com.sammysco.avoverlay",
-        "version": "2.4.4",
+        "version": "2.4.5",
         "type": "web",
         "title": "eARC Volume Overlay (Denon fork)",
         "appDescription": "On-screen AVR volume/format overlay; Yamaha + Denon/Marantz. Rooted TV required.",
         "iconUri": "https://ovsteenb.github.io/webos-av-overlay/icons/com.sammysco.avoverlay.png",
         "sourceUrl": "https://github.com/ovsteenb/webos-av-overlay/tree/denon-avr-support",
         "rootRequired": true,
-        "ipkUrl": "https://github.com/ovsteenb/webos-av-overlay/releases/download/v2.4.4-denon/com.sammysco.avoverlay_2.4.4_all.ipk",
+        "ipkUrl": "https://github.com/ovsteenb/webos-av-overlay/releases/download/v2.4.5-denon/com.sammysco.avoverlay_2.4.5_all.ipk",
         "ipkHash": {
-          "sha256": "9a1300038c8fb132ffa07d7066aa54877ff5e4daa493161bc9fb13dde4b93379"
+          "sha256": "125b454d217d6185e04e62d624855d6310e5bdb3e46f9ca870532795b76ed81b"
         },
-        "ipkSize": 61206
+        "ipkSize": 62822
       },
       "pool": "main",
       "shortDescription": "On-screen AVR volume/format overlay; Yamaha + Denon/Marantz. Rooted TV required."
@@ -38,18 +38,18 @@
       "manifestUrl": "https://ovsteenb.github.io/webos-av-overlay/apps/com.sammysco.avoverlay.settings/manifest.json",
       "manifest": {
         "id": "com.sammysco.avoverlay.settings",
-        "version": "2.4.4",
+        "version": "2.4.5",
         "type": "web",
         "title": "AV Overlay Settings (Denon fork)",
         "appDescription": "Settings app for eARC Volume Overlay.",
         "iconUri": "https://ovsteenb.github.io/webos-av-overlay/icons/com.sammysco.avoverlay.settings.png",
         "sourceUrl": "https://github.com/ovsteenb/webos-av-overlay/tree/denon-avr-support",
         "rootRequired": true,
-        "ipkUrl": "https://github.com/ovsteenb/webos-av-overlay/releases/download/v2.4.4-denon/com.sammysco.avoverlay.settings_2.4.4_all.ipk",
+        "ipkUrl": "https://github.com/ovsteenb/webos-av-overlay/releases/download/v2.4.5-denon/com.sammysco.avoverlay.settings_2.4.5_all.ipk",
         "ipkHash": {
-          "sha256": "3d5be5639bf682eea7abbc8686161ab348bca1f2bfc3118b7f75ded033db1145"
+          "sha256": "30cf3e23b351cb4d9a86cee6697221caa6d4a1db16d4a0f5eddc9fdca9f1ca3a"
         },
-        "ipkSize": 11076
+        "ipkSize": 11514
       },
       "pool": "main",
       "shortDescription": "Settings app for eARC Volume Overlay."
