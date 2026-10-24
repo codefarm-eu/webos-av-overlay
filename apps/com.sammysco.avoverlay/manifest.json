@@ -4,10 +4,10 @@
  "type": "web",
  "title": "eARC Volume Overlay (Denon fork)",
  "appDescription": "On-screen AVR volume/format overlay; Yamaha + Denon/Marantz. Rooted TV required.",
- "iconUri": "https://ovsteenb.github.io/webos-av-overlay/icons/com.sammysco.avoverlay.png",
- "sourceUrl": "https://github.com/ovsteenb/webos-av-overlay/tree/denon-avr-support",
+ "iconUri": "https://codefarm-eu.github.io/webos-av-overlay/icons/com.sammysco.avoverlay.png",
+ "sourceUrl": "https://github.com/codefarm-eu/webos-av-overlay/tree/denon-avr-support",
  "rootRequired": true,
- "ipkUrl": "https://github.com/ovsteenb/webos-av-overlay/releases/download/v2.5.3-denon/com.sammysco.avoverlay_2.5.3_all.ipk",
+ "ipkUrl": "https://github.com/codefarm-eu/webos-av-overlay/releases/download/v2.5.3-denon/com.sammysco.avoverlay_2.5.3_all.ipk",
  "ipkHash": {
   "sha256": "7119221243919b6f7fc9aa3c44605742e820ba0cecce4c8e5659e33fb552fe51"
  },
