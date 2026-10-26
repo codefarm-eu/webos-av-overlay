@@ -352,7 +352,7 @@ module.exports = function createProfiles(ctx) {
   function push(name) {
     name = String(name || '').trim().slice(0, 60);
     pushed = name ? { name: name, at: Date.now() } : null;
-    try { shared.writeFileAtomic(PUSHED_FILE, JSON.stringify(pushed || {}), 0o600); } catch (e) {}
+    try { shared.writeFileAtomic(PUSHED_FILE, JSON.stringify(pushed || {}), 384 /* 0600; Node 0.12 has no 0o literals */); } catch (e) {}
     ctx.log('app pushed: ' + (name || '(cleared)'));
     if (name) rememberSeen(name);
     noteContext();

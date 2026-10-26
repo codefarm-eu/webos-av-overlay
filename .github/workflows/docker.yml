@@ -21,6 +21,8 @@ env:
 
 jobs:
   publish:
+    # Forks build-check pull requests only: a tag or manual run would try to push to the upstream image above.
+    if: github.event_name == 'pull_request' || github.repository == 'SammySco/webos-av-overlay'
     runs-on: ubuntu-latest
     permissions:
       contents: read

@@ -13,6 +13,8 @@ tag does; this page says how to use them.
   and never move `X.Y` or `latest`.
 - The manifest step also runs on every pull request, and the Docker image is built (not pushed) on pull requests that
   touch the image inputs, so a broken generator, Dockerfile or `.dockerignore` fails the pull request instead of a tag.
+- In a fork, the manifest URLs follow the fork (`GITHUB_REPOSITORY`) and `docker.yml` runs only the pull request build
+  check, so a tag never tries to push to the upstream image.
 
 ## Testing before a public release
 1. Work on a branch. Deploy it to a TV: `TV_HOST=root@<tv-ip> sh scripts/deploy.sh`. Use it for a few days against a
@@ -53,6 +55,10 @@ Tags are not moved or reused. A fix ships as the next patch version.
   whole `app` folder. The packages and manifest were fine. Fixed by `app/*` plus `!app/appinfo.json` and by the
   build-only Docker check on pull requests; v2.4.3 is the first image with those changes. Lesson: Docker changes need a
   Docker build before tagging.
+- **v2.5.3 crashed at boot on webOS 4.x.** `runtime/profiles.js` used the ES2015 octal literal `0o600`; the TV's
+  Node v0.12.2 rejects it with `SyntaxError: Unexpected token ILLEGAL`, so the watcher never started (no overlay, no
+  setup page). Fixed in v2.5.4, and the `node012-syntax` job now compiles every `runtime/*.js` with Node 0.12
+  (`scripts/check-node012.js`) before the build. Lesson: the runtime is ES5 only.
 
 ## Environment notes
 - Windows: the 260-character path limit breaks clones in deep folders. Clone to a short path with

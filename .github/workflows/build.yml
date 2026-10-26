@@ -8,7 +8,16 @@ on:
   workflow_dispatch:
 
 jobs:
+  node012-syntax:
+    # The TV runs the runtime on Node v0.12.2, so ES2015+ syntax there kills the service at boot (v2.5.3: 0o600).
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile runtime/*.js with Node 0.12
+        run: docker run --rm -v "$PWD:/src:ro" -w /src node:0.12 node scripts/check-node012.js
+
   build:
+    needs: node012-syntax
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
