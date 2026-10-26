@@ -53,6 +53,10 @@ Tags are not moved or reused. A fix ships as the next patch version.
   whole `app` folder. The packages and manifest were fine. Fixed by `app/*` plus `!app/appinfo.json` and by the
   build-only Docker check on pull requests; v2.4.3 is the first image with those changes. Lesson: Docker changes need a
   Docker build before tagging.
+- **v2.5.3 crashed at boot on webOS 4.x.** `runtime/profiles.js` used the ES2015 octal literal `0o600`; the TV's
+  Node v0.12.2 rejects it with `SyntaxError: Unexpected token ILLEGAL`, so the watcher never started (no overlay, no
+  setup page). Fixed in v2.5.4, and the `node012-syntax` job now compiles every `runtime/*.js` with Node 0.12
+  (`scripts/check-node012.js`) before the build. Lesson: the runtime is ES5 only.
 
 ## Environment notes
 - Windows: the 260-character path limit breaks clones in deep folders. Clone to a short path with
