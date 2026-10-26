@@ -13,6 +13,8 @@ tag does; this page says how to use them.
   and never move `X.Y` or `latest`.
 - The manifest step also runs on every pull request, and the Docker image is built (not pushed) on pull requests that
   touch the image inputs, so a broken generator, Dockerfile or `.dockerignore` fails the pull request instead of a tag.
+- In a fork, the manifest URLs follow the fork (`GITHUB_REPOSITORY`) and `docker.yml` runs only the pull request build
+  check, so a tag never tries to push to the upstream image.
 
 ## Testing before a public release
 1. Work on a branch. Deploy it to a TV: `TV_HOST=root@<tv-ip> sh scripts/deploy.sh`. Use it for a few days against a

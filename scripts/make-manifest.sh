@@ -11,6 +11,8 @@ SHA=$(node -e "process.stdout.write(require('crypto').createHash('sha256').updat
 SIZE=$(wc -c < "$IPK" | tr -d ' ')
 # A release candidate tag such as v2.4.4-rc.1 keeps the numeric app version, so the download URL must use the tag.
 case "${GITHUB_REF_TYPE:-}" in tag) TAG="$GITHUB_REF_NAME" ;; *) TAG="v${VERSION}" ;; esac
+# GitHub Actions sets GITHUB_REPOSITORY, so a fork's manifest points at the fork's releases instead of upstream.
+REPO="${GITHUB_REPOSITORY:-SammySco/webos-av-overlay}"
 mkdir -p release
 
 cat > release/com.sammysco.avoverlay.manifest.json <<JSON
@@ -20,10 +22,10 @@ cat > release/com.sammysco.avoverlay.manifest.json <<JSON
   "type": "web",
   "title": "AV Overlay",
   "appDescription": "On-screen volume popup and info bar for a rooted LG webOS TV paired with a Yamaha receiver over eARC/ARC. Shows volume, sound program, audio format, video format, HDR, and optionally Plex or Jellyfin stream details. Includes per-app Yamaha sound program switching and a setup/status web page.",
-  "iconUri": "https://raw.githubusercontent.com/SammySco/webos-av-overlay/main/app/largeIcon.png",
-  "sourceUrl": "https://github.com/SammySco/webos-av-overlay",
+  "iconUri": "https://raw.githubusercontent.com/${REPO}/main/app/largeIcon.png",
+  "sourceUrl": "https://github.com/${REPO}",
   "rootRequired": true,
-  "ipkUrl": "https://github.com/SammySco/webos-av-overlay/releases/download/${TAG}/com.sammysco.avoverlay_${VERSION}_all.ipk",
+  "ipkUrl": "https://github.com/${REPO}/releases/download/${TAG}/com.sammysco.avoverlay_${VERSION}_all.ipk",
   "ipkHash": {
     "sha256": "$SHA"
   },
